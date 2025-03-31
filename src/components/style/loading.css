@@ -1,0 +1,9 @@
+.spinner{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-left: 10px solid rgb(3, 164, 3);
+    border-top: 10px solid rgb(5, 155, 5);
+    animation: spin 1s linear infinite;
+}

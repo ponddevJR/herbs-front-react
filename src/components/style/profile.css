@@ -1,0 +1,12 @@
+
+.img-section{
+    border-top-left-radius:5px ;
+    border-top-right-radius:5px ;
+}
+button{
+    transition: .3s all ease;
+}
+.active{
+    background-color: #0c2d1a;
+    color: #fff;
+}
