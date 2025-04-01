@@ -15,7 +15,7 @@ export const login = async (form) => {
 
 export const getSingle = async () => {
     try {
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/getone`,{},{withCredentials:true});
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/getone`,{withCredentials:true});
         return res.data.user;
     } catch (error) {
         return false;
@@ -23,7 +23,7 @@ export const getSingle = async () => {
 }
 
 export const logout = async () => {
-    return await axios.get(`${import.meta.env.VITE_API_URL}/logout`,{withCredentials:true});
+    return await axios.get(`${import.meta.env.VITE_API_URL}/logout`,{},{withCredentials:true});
 }
 
 export const updateData = async (form) => {
