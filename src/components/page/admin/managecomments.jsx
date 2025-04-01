@@ -190,7 +190,9 @@ const ManageComments = () => {
                                 </td>
                                 <td className=''>
                                     <div style={{padding:"0.8rem"}} className="flex items-center justify-center">
-                                        <img src={allUsers.find((u) => u._id === item?.user_id)?.profile?.profile_img || 'https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg'} className='object-cover w-[3.3vw] h-[7vh] border border-gray-800 rounded-full' alt="" />
+                                        <img src={allUsers.find((u) => u._id === item?.user_id)?.profile?.profile_img?.startsWith("i") ? 
+                                        import.meta.env.VITE_IMG_URL+allUsers.find((u) => u._id === item?.user_id)?.profile?.profile_img : allUsers.find((u) => u._id === item?.user_id)?.profile?.profile_img
+                                        || 'https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg'} className='object-cover w-[3.3vw] h-[7vh] border border-gray-800 rounded-full' alt="" />
                                     </div>
                                 </td>
                                 <td className='font-bold'>
