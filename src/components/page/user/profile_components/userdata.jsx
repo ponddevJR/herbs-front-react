@@ -26,7 +26,7 @@ const UserData = ({ user }) => {
         >
           <img
             className="w-[5.8rem] h-[5.3rem] rounded-full border-2 border-white object-cover"
-            src={`/public/img/${user?.role}.png`}
+            src={`/img/${user?.role}.png`}
             alt="User"
           />
           <label
@@ -120,7 +120,7 @@ const UserData = ({ user }) => {
             src={`${
               user?.profile?.profile_img?.split("")[0] === "h"
                 ? user?.profile?.profile_img
-                : `http://localhost:8989/uploads/${user?.profile?.profile_img}`
+                : `${import.meta.env.VITE_IMG_URL}${user?.profile?.profile_img}`
             }`}
             alt="Profile"
           />

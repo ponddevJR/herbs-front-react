@@ -6,13 +6,16 @@ import { FaFilter, FaList, FaSearch } from 'react-icons/fa'
 import HerbsComponents from './herbs'
 import { getHerbs } from '@/components/function/herbs'
 import { getAllCategories } from '@/components/function/category'
+import Loading from '@/components/layout/loading'
 
 const AllHerbPage = () => {
   const [originalHerbs,setOriginalHerb] = useState([]);
+  const [isLoading,setIsLoading] = useState(false);
   const [herbs,setHerbs] = useState([]);
   const [categories,setCategories] = useState([]);
 
   const fetchHerb = async () => {
+    setIsLoading(true);
     try {
       const herbs = await getHerbs();
       const categories = await getAllCategories();
@@ -23,6 +26,8 @@ const AllHerbPage = () => {
       setCategories(categories?.data?.categories)
     } catch (error) {
       console.erro(error);
+    }finally{
+      setIsLoading(false);
     }
   }
 
@@ -30,6 +35,9 @@ const AllHerbPage = () => {
 
   return (
     <>
+    {
+      isLoading && <Loading/>
+    }
     <Navbar/>
         <div className="w-screen h-screen flex flex-col items-center">
             <div  style={{marginTop:"6.5rem",marginBottom:"10rem"}} className="w-[75%] flex flex-col gap-6 items-center">

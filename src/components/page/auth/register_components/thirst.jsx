@@ -196,7 +196,7 @@ const Thirst = (props) => {
         className="w-full items-center flex flex-col gap-2"
       >
         <img
-          src="/public/img/mobile_mail.png"
+          src="/img/mobile_mail.png"
           className="w-[10rem] h-[8rem]"
           alt=""
         />

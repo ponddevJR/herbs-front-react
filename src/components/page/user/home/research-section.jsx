@@ -10,7 +10,6 @@ const ResearchSection = () => {
   useEffect(() => {
     try {
       getAllResearch().then((res) => {
-        console.log("🚀 ~ getAllResearch ~ res:", res);
         if (!res?.data?.data) return;
         setResearchs(res?.data?.data);
       });
