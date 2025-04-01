@@ -161,7 +161,7 @@ const Thirst = (props) => {
         className="w-full items-center flex-col gap-2"
       >
         <img
-          src="/public/img/email.png"
+          src="/img/email.png"
           className="w-[10rem] h-[8rem]"
           alt=""
         />
@@ -246,7 +246,7 @@ const Thirst = (props) => {
         }`}
       >
         <div className="w-[40%] h-[28%]">
-          <img className="w-full h-full" src="/public/img/phone.png" alt="" />
+          <img className="w-full h-full" src="/img/phone.png" alt="" />
         </div>
         <p>กรอกเบอร์โทรศัพท์และเลือกบทบาท</p>
         <div

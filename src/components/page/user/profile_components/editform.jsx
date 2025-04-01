@@ -20,7 +20,7 @@ const FormEdit = ({ user, updateUser }) => {
   );
   const [previewFile, setPreviewFile] = useState(
     !user?.profile?.profile_img.startsWith("h")
-      ? `http://localhost:8989/uploads/${user?.profile?.profile_img}`
+      ? `${import.meta.env.VITE_IMG_URL}${user?.profile?.profile_img}`
       : ""
   );
   const [amphure, setAmphure] = useState([]);
