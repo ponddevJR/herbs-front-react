@@ -71,7 +71,7 @@ const Navbar = () => {
                                 <Link className="link relative transition-all duration-200 hover:text-white text-lg text-gray-200" to="/profile">
                                     <div className="flex gap-1 items-center">
                                         <label htmlFor="">{user?.profile.fname}</label>
-                                        <img className="w-[2rem] h-[2rem] rounded-full object-cover border-2 border-white bg-white" src={user.profile.profile_img.split("")[0] === 'h' ? user.profile.profile_img : `http://localhost:8989/uploads/${user.profile.profile_img}`} alt="" />
+                                        <img className="w-[2rem] h-[2rem] rounded-full object-cover border-2 border-white bg-white" src={user.profile.profile_img?.startsWith("i") ? import.meta.env.VITE_IMG_URL+user?.profile?.profile_img : user?.profile?.profile_img} alt="" />
                                     </div>
                                 </Link>
                                 {
